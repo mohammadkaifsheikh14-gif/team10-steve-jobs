@@ -97,7 +97,7 @@ def game_play():
         hits = int(data.get("hits", 0))
     except (TypeError, ValueError):
         hits = 0
-    if hits < 5:
+    if hits < 25:
         return jsonify(ok=False, error="Complete the snack challenge first!"), 400
 
     won = secrets.randbelow(100) == 0  # exactly 1 winning number out of 100
