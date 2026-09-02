@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e50914">
+<title>TEAM 10 — STEVE JOBS | Food Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="cursorGlow"></div>
+<div class="progress"><span id="progress"></span></div>
+
+<header class="nav">
+  <a class="brand" href="#"><span class="brand-dot">10</span><span>STEVE JOBS</span></a>
+  <nav>
+    <a href="#menu">Menu</a><a href="#game">Game</a><a href="#meme">Memes</a><a href="#review">Review</a><a href="#reviews">Wall</a>
+  </nav>
+  <a class="nav-cta" href="#review">RATE US <span>↗</span></a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
+      <div class="kicker"><span></span> G H RAISONI SKILL TECH UNIVERSITY · COLLEGE FOOD LAB</div>
+      <h1>CRAZY<br><em>GOOD.</em></h1>
+      <p class="hero-sub">Three snacks. One legendary stall. <b>Team #10 — Steve Jobs.</b> Taste it, rate it, make us famous.</p>
+      <div class="hero-buttons"><a class="btn red" href="#menu">EXPLORE THE MENU <span>↓</span></a><a class="btn dark" href="#review">DROP A REVIEW</a></div>
+      <div class="hero-stats"><div><b id="heroAverage">—</b><span>AVG RATING</span></div><div><b id="heroTotal">0</b><span>REVIEWS</span></div><div><b>03</b><span>ICONIC BITES</span></div></div>
+    </div>
+    <div class="hero-stage reveal">
+      <div class="stage-ring ring1"></div><div class="stage-ring ring2"></div><div class="stage-grid"></div>
+      <div class="product-orbit po1"><div class="product-photo"><img src="{{ url_for('static', filename='images/cheesy-nuggets.webp') }}" onerror="this.style.display='none';this.parentElement.classList.add('fallback');this.parentElement.querySelector('span').style.display='block'"><span>NUGGETS</span></div><small>01 / NUGGETS</small></div>
+      <div class="product-orbit po2"><div class="product-photo"><img src="{{ url_for('static', filename='images/loaded-nachos.webp') }}" onerror="this.style.display='none';this.parentElement.classList.add('fallback');this.parentElement.querySelector('span').style.display='block'"><span>NACHOS</span></div><small>02 / NACHOS</small></div>
+      <div class="product-orbit po3"><div class="product-photo"><img src="{{ url_for('static', filename='images/guava-shots.webp') }}" onerror="this.style.display='none';this.parentElement.classList.add('fallback');this.parentElement.querySelector('span').style.display='block'"><span>GUAVA</span></div><small>03 / GUAVA</small></div>
+      <div class="center-badge"><span>TEAM</span><b>#10</b><small>STEVE JOBS</small></div>
+      <div class="scroll-note">SCROLL TO TASTE <span>↓</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker"><div>CHEESY NUGGETS <i>✦</i> LOADED NACHOS <i>✦</i> GUAVA SHOTS <i>✦</i> TEAM #10 <i>✦</i> G H RAISONI <i>✦</i> </div><div aria-hidden="true">CHEESY NUGGETS <i>✦</i> LOADED NACHOS <i>✦</i> GUAVA SHOTS <i>✦</i> TEAM #10 <i>✦</i></div></div>
+
+<section id="menu" class="section">
+  <div class="section-top reveal"><div><span class="eyebrow">THE LINEUP</span><h2>MEET THE<br><em>MAIN CHARACTERS.</em></h2></div><p>Built for college hunger. Styled for the camera. Rated by you.</p></div>
+  <div class="menu-grid">
+    <article class="food-card tilt reveal"><div class="number">01</div><div class="photo-wrap"><img src="{{ url_for('static', filename='images/cheesy-nuggets.webp') }}" onerror="this.style.display='none';this.parentElement.classList.add('fallback');this.parentElement.querySelector('span').style.display='block'"><span>NUGGETS</span></div><div class="food-info"><div><h3>Cheesy Nuggets</h3><p>Crunch outside. Cheese energy inside.</p></div><b>🧀</b></div><div class="card-line"><span>CRUNCH × CHEESE</span><span>01</span></div></article>
+    <article class="food-card tilt featured reveal"><div class="number">02</div><div class="photo-wrap"><img src="{{ url_for('static', filename='images/loaded-nachos.webp') }}" onerror="this.style.display='none';this.parentElement.classList.add('fallback');this.parentElement.querySelector('span').style.display='block'"><span>NACHOS</span></div><div class="food-info"><div><h3>Loaded Nachos</h3><p>Messy, loaded and absolutely worth it.</p></div><b>🌶️</b></div><div class="card-line"><span>CRUNCH × CHAOS</span><span>02</span></div></article>
+    <article class="food-card tilt reveal"><div class="number">03</div><div class="photo-wrap"><img src="{{ url_for('static', filename='images/guava-shots.webp') }}" onerror="this.style.display='none';this.parentElement.classList.add('fallback');this.parentElement.querySelector('span').style.display='block'"><span>GUAVA</span></div><div class="food-info"><div><h3>Guava Shots</h3><p>Sweet, punchy and dangerously refreshing.</p></div><b>⚡</b></div><div class="card-line"><span>SWEET × PUNCH</span><span>03</span></div></article>
+  </div>
+</section>
+
+<section id="meme" class="meme-zone section">
+ <div class="meme-head reveal"><span class="eyebrow">COLLEGE MODE: ON</span><h2>YOU CAME FOR<br><em>FOOD. STAY FOR MEMES.</em></h2><p>Tap the button. The meme machine has no mercy.</p></div>
+ <div class="meme-machine reveal">
+   <div class="meme-paper" id="memeCard"><div class="meme-small">TEAM #10 PRESENTS</div><div class="meme-face" id="memeFace1">😐</div><div class="meme-big" id="memeTop">ME: I'LL JUST TASTE IT</div><div class="meme-arrow">↓</div><div class="meme-face" id="memeFace2">🤤</div><div class="meme-big" id="memeBottom">ALSO ME: ORDER ANOTHER.</div></div>
+   <div class="meme-actions"><button id="memeGenerate" class="btn red">GENERATE MEME <span>↻</span></button><button id="memeShare" class="btn white">SHARE / COPY ↗</button></div>
+ </div>
+</section>
+
+<section id="game" class="section game-section">
+  <div class="game-head reveal">
+    <div><span class="eyebrow">TEAM #10 ARCADE</span><h2>BEAT THE<br><em>SNACK BOSS.</em></h2></div>
+    <p>Free to play. One attempt per browser. Finish the mini challenge and the server runs the <strong>1-in-100</strong> discount draw.</p>
+  </div>
+  <div class="game-shell reveal">
+    <div class="game-topbar"><div><span class="live-dot"></span> SNACK SMASH 10</div><div>TIME <b id="gameTimer">10.0</b>s</div><div>HITS <b id="gameHits">0</b>/5</div></div>
+    <div class="game-arena" id="gameArena">
+      <div class="arena-center" id="gameIntro"><div class="boss-icon">👑</div><h3>SNACK BOSS</h3><p>Catch 5 falling food icons before the clock hits zero.</p><button class="btn red" id="gameStart" type="button">START THE CHAOS ⚡</button><small>Winning the challenge does NOT guarantee the discount — only a 1% server-side draw wins.</small></div>
+      <div class="game-win" id="gameWin" hidden><div class="win-icon">🏆</div><h3>YOU ACTUALLY WON?!</h3><p>Team #10 owes you a <strong>10% discount.</strong></p><div class="discount-code" id="discountCode">SJ10-10OFF-XXXXXX</div><small>Show this code to Team #10 at the stall.</small><button class="btn white" id="playAgain" type="button">NICE TRY, LEGEND</button></div>
+      <div class="game-lose" id="gameLose" hidden><div class="lose-icon">💀</div><h3>THE SNACK BOSS SURVIVED.</h3><p>No 10% discount this time — but you still get bragging rights.</p><div class="lose-line">The odds were <strong>1 in 100.</strong></div><button class="btn white" id="gameDone" type="button">RATE THE FOOD INSTEAD ↗</button></div>
+    </div>
+    <div class="game-foot"><span>🧀 🥤 🌽</span><span>100% FREE · NO PURCHASE REQUIRED</span><span>TEAM #10 × STEVE JOBS</span></div>
+  </div>
+</section>
+
+<section id="review" class="section review-section">
+ <div class="section-top centered reveal"><div><span class="eyebrow">YOUR TURN</span><h2>RATE THE<br><em>EXPERIENCE.</em></h2></div><p>Your honest rating goes straight into our live Team #10 dashboard.</p></div>
+ <div class="review-layout">
+  <form id="reviewForm" class="glass reveal">
+    <div class="form-label">01 — WHO ARE YOU?</div>
+    <div class="two-col"><label>Name<input id="name" maxlength="80" placeholder="Your name" required></label><label>Contact <small>(optional)</small><input id="contact" maxlength="120" placeholder="Email / Instagram"></label></div>
+    <div class="form-label">02 — WHAT DID YOU TRY?</div>
+    <div class="product-picker">
+<button type="button" data-product="Cheesy Nuggets"><img src="{{ url_for('static', filename='images/cheesy-nuggets.webp') }}" alt="Cheesy Nuggets"><span>NUGGETS</span></button>
+<button type="button" data-product="Loaded Nachos"><img src="{{ url_for('static', filename='images/loaded-nachos.webp') }}" alt="Loaded Nachos"><span>NACHOS</span></button>
+<button type="button" data-product="Guava Shots"><img src="{{ url_for('static', filename='images/guava-shots.webp') }}" alt="Guava Shots"><span>GUAVA SHOTS</span></button>
+</div><input id="product" type="hidden">
+    <div class="form-label">03 — HOW WAS IT?</div>
+    <div class="stars" id="stars" aria-label="Rating"><button type="button" data-rating="1">★</button><button type="button" data-rating="2">★</button><button type="button" data-rating="3">★</button><button type="button" data-rating="4">★</button><button type="button" data-rating="5">★</button></div><input id="rating" type="hidden">
+    <label>Review<textarea id="comment" maxlength="500" placeholder="Be honest. Be dramatic. Be funny." required></textarea><div class="char"><span id="charCount">0</span>/500</div></label>
+    <button class="btn red submit-btn" type="submit">PUBLISH MY REVIEW <span>↗</span></button>
+  </form>
+  <aside class="rating-card reveal"><div class="rating-orb"><span id="averageRating">—</span><small>/ 5</small></div><div class="live-stars" id="averageStars">☆☆☆☆☆</div><h3>THE CROWD HAS SPOKEN.</h3><p><span id="reviewCount">0</span> reviews and counting. Your rating changes the live score.</p><div class="distribution"><div><span>5</span><i><b id="bar5"></b></i></div><div><span>4</span><i><b id="bar4"></b></i></div><div><span>3</span><i><b id="bar3"></b></i></div><div><span>2</span><i><b id="bar2"></b></i></div><div><span>1</span><i><b id="bar1"></b></i></div></div></aside>
+ </div>
+</section>
+
+<section id="reviews" class="section wall">
+ <div class="section-top reveal"><div><span class="eyebrow">LIVE WALL</span><h2>THE<br><em>HYPE.</em></h2></div><select id="reviewFilter"><option value="all">ALL PRODUCTS</option><option>Cheesy Nuggets</option><option>Loaded Nachos</option><option>Guava Shots</option></select></div>
+ <div class="reviews-grid" id="reviewsGrid"><div class="empty">Loading the hype…</div></div>
+</section>
+</main>
+
+<footer><div><strong>TEAM <em>#10</em></strong><span>STEVE JOBS</span></div><p>Made for G H Raisoni Skill Tech University · Food Stall Edition</p><a href="/admin">ADMIN ↗</a></footer>
+<div id="toast" class="toast"></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body></html>
