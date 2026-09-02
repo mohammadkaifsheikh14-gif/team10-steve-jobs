@@ -93,7 +93,7 @@ function spawnSnack(){
  const rect=gameArena.getBoundingClientRect();
  el.style.left=Math.max(2,Math.min(92,Math.random()*90))+"%";
  el.style.top=Math.max(8,Math.min(84,Math.random()*76))+"%";
- el.addEventListener("click",()=>{if(el.classList.contains("hit"))return;gameHits++;$("gameHits").textContent=gameHits;el.classList.add("hit");setTimeout(()=>el.remove(),260);if(gameHits>=25)finishGame(true);});
+ el.addEventListener("click",()=>{if(el.classList.contains("hit"))return;gameHits++;$("gameHits").textContent=gameHits;el.classList.add("hit");setTimeout(()=>el.remove(),260);if(gameHits>=30)finishGame(true);});
  gameArena.appendChild(el);setTimeout(()=>el.remove(),1400);
 }
 function startGame(){
@@ -103,7 +103,7 @@ function startGame(){
 }
 async function finishGame(completed){
  if(gameEnded)return;gameEnded=true;clearInterval(gameInterval);document.querySelectorAll(".snack-target").forEach(x=>x.remove());gameArena.classList.remove("game-playing");
- if(!completed){gameIntro.hidden=false;gameIntro.innerHTML='<div class="lose-icon">⏰</div><h3>TIME! THE SNACK ESCAPED.</h3><p>You needed 25 hits. The boss is laughing.</p><button class="btn red" type="button" onclick="location.reload()">TRY AGAIN ↻</button>';return;}
+ if(!completed){gameIntro.hidden=false;gameIntro.innerHTML='<div class="lose-icon">⏰</div><h3>TIME! THE SNACK ESCAPED.</h3><p>You needed 30 hits. The boss is laughing.</p><button class="btn red" type="button" onclick="location.reload()">TRY AGAIN ↻</button>';return;}
  try{
   const r=await fetch("/api/game/play",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({hits:gameHits})});
   const data=await r.json();if(!r.ok)throw Error(data.error||"Game unavailable");
