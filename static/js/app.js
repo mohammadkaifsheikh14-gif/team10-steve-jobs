@@ -99,7 +99,7 @@ function spawnSnack(){
 function startGame(){
  if(gameStarted)return;gameStarted=true;gameEnded=false;gameHits=0;gameTime=10;$("gameHits").textContent="0";$("gameTimer").textContent="10.0";gameArena.classList.add("game-playing");
  gameInterval=setInterval(()=>{gameTime-=.1;$("gameTimer").textContent=Math.max(0,gameTime).toFixed(1);if(gameTime<=0)finishGame(false);},100);
- const sp=setInterval(()=>{if(gameEnded){clearInterval(sp);return}spawnSnack();},300);spawnSnack();
+ const sp=setInterval(()=>{if(gameEnded){clearInterval(sp);return}spawnSnack();},400);spawnSnack();
 }
 async function finishGame(completed){
  if(gameEnded)return;gameEnded=true;clearInterval(gameInterval);document.querySelectorAll(".snack-target").forEach(x=>x.remove());gameArena.classList.remove("game-playing");
